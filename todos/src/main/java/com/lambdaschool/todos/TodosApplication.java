@@ -12,14 +12,14 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 public class TodosApplication
 {
 
-    /**
-     * Main method to start the application.
-     *
-     * @param args Not used in this application.
-     */
-    public static void main(String[] args)
-    {
-        SpringApplication.run(TodosApplication.class,
-            args);
-    }
+	/**
+	 * Main method to start the application.
+	 *
+	 * @param args Not used in this application.
+	 */
+	public static void main(String[] args)
+	{
+		SpringApplication.run(TodosApplication.class,
+				args);
+	}
 }

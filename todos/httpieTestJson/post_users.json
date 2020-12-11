@@ -1,0 +1,13 @@
+{
+    "username": "lambdallama",
+    "primaryemail": "llama@lambdaschool.local",
+    "password": "ILuvM4th!",
+    "todos": [
+        {
+            "description": "Take over the world"
+        },
+        {
+            "description": "Make lasagna"
+        }
+    ]
+}

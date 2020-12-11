@@ -16,11 +16,11 @@ import static javax.persistence.TemporalType.TIMESTAMP;
 /**
  * Abstract class that adds standard auditing fields to tables that extend it
  *
- * @MappedSuperclass - Since relational databases do not support inheritance,
- * Spring Boot provides a way to say that this class is a "parent" class whose fields will be included in the child class.
- * The child class is the one that forms the entity for the database.
- * @EntityListeners - When an entity is accessed by the Spring Framework, the argument of the Entity Listener annotation is fired.
- * Thus this annotiation is "listening" for when an entity is accessed and then performs its argument.
+ * @MappedSuperclass - Since relational databases do not support inheritance, Spring Boot provides a way to say that
+ * this class is a "parent" class whose fields will be included in the child class. The child class is the one that
+ * forms the entity for the database.
+ * @EntityListeners - When an entity is accessed by the Spring Framework, the argument of the Entity Listener annotation
+ * is fired. Thus this annotiation is "listening" for when an entity is accessed and then performs its argument.
  * AuditingEntityListener.class - The class that captures the data for and updates the annotations used in auditing -
  * CreatedBy, CreatedDate, ModifiedBy, ModifiedDate
  */
@@ -28,33 +28,33 @@ import static javax.persistence.TemporalType.TIMESTAMP;
 @EntityListeners(AuditingEntityListener.class)
 abstract class Auditable
 {
-    /**
-     * String field containing the username of who created this row
-     */
-    @CreatedBy
-    protected String createdBy;
+	/**
+	 * String field containing the username of who created this row
+	 */
+	@CreatedBy
+	protected String created_by;
 
-    /**
-     * Date field containing the date and time when the row was created
-     * <p>
-     * Temporal(TIMESTAMP) - Sets the precision of the date being saved. In this case Date and Time
-     */
-    @CreatedDate
-    @Temporal(TIMESTAMP)
-    protected Date createdDate;
+	/**
+	 * Date field containing the date and time when the row was created
+	 * <p>
+	 * Temporal(TIMESTAMP) - Sets the precision of the date being saved. In this case Date and Time
+	 */
+	@CreatedDate
+	@Temporal(TIMESTAMP)
+	protected Date created_date;
 
-    /**
-     * String field containing the username of who last modified this row
-     */
-    @LastModifiedBy
-    protected String lastModifiedBy;
+	/**
+	 * String field containing the username of who last modified this row
+	 */
+	@LastModifiedBy
+	protected String last_modified_by;
 
-    /**
-     * Date field containing the data and time when the row was last modified
-     * <p>
-     * Temporal(TIMESTAMP) - Sets the precision of the date being saved. In this case Date and Time
-     */
-    @LastModifiedDate
-    @Temporal(TIMESTAMP)
-    protected Date lastModifiedDate;
+	/**
+	 * Date field containing the data and time when the row was last modified
+	 * <p>
+	 * Temporal(TIMESTAMP) - Sets the precision of the date being saved. In this case Date and Time
+	 */
+	@LastModifiedDate
+	@Temporal(TIMESTAMP)
+	protected Date last_modified_date;
 }

@@ -2,17 +2,25 @@
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
-This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **using RDBMS and APIs in Java**. During this sprint, you studied **Spring Data, JPA, and Hibernate**. In your challenge this week, you will demonstrate your mastery of these skills by creating **a Java Spring REST API Application**.
+This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a
+concrete project. This sprint explored **using RDBMS and APIs in Java**. During this sprint, you studied **Spring Data,
+JPA, and Hibernate**. In your challenge this week, you will demonstrate your mastery of these skills by creating **a
+Java Spring REST API Application**.
 
-This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
+This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work
+independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and
+objectives introduced and practiced in preceding days.
 
-You are not allowed to collaborate during the sprint challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL if you need direction.
+You are not allowed to collaborate during the sprint challenge. However, you are encouraged to follow the twenty-minute
+rule and seek support from your TL if you need direction.
 
 _You have **three hours** to complete this challenge. Plan your time accordingly._
 
 ## Introduction
 
-This is a basic todo database scheme with users and a todo list. Users have a one to many relationship to todo list. One user can have many todo items while a todo item only matches to one user. CRUD operations are available to display and manipulate this data.
+This is a basic todo database scheme with users and a todo list. Users have a one to many relationship to todo list. One
+user can have many todo items while a todo item only matches to one user. CRUD operations are available to display and
+manipulate this data.
 
 Your final results should look like:
 
@@ -1743,9 +1751,11 @@ STATUS OK
 
 ### Commits
 
-Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your team lead as the evaluate your solution.
+Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any
+number of reasons) and your team lead as the evaluate your solution.
 
-Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
+Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
+You might prepare by writing down your own answers before hand.
 
 1. Can you explain your data model, data schema to me?
 2. Can you explain how you connected your API to a database?
@@ -1769,21 +1779,28 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 You will be creating a REST api service to store and read data from an H2 database.
 
-- [ ] Please fork and clone this repository. This repository has a starting application called todos. You must start working from there. Regularly commit and push your code as appropriate.
+- [ ] Please fork and clone this repository. This repository has a starting application called todos. You must start
+  working from there. Regularly commit and push your code as appropriate.
 
-- [ ] The initial application contains the model for the users table. Endpoints are already created and the structure for auditing fields is in place. You are adding the model for the todos table and updating the services to work with the new table.
+- [ ] The initial application contains the model for the users table. Endpoints are already created and the structure
+  for auditing fields is in place. You are adding the model for the todos table and updating the services to work with
+  the new table.
 
 - [ ] TODOS
-  - `todoid` primary key, not null long
-  - `description` string, not null
-  - `completed` boolean. Note that for all new todos, default completed to false
-  - `userid` foreign key (one user to many todos) not null
-  - All tables must have the standard 4 auditing fields in place and working, being populated: created on, created by, last modified on, last modified by. The auditing usernames will all default to `llama`.
-  - USERS have a one to many relationship with TODOS.
+    - `todoid` primary key, not null long
+    - `description` string, not null
+    - `completed` boolean. Note that for all new todos, default completed to false
+    - `userid` foreign key (one user to many todos) not null
+    - All tables must have the standard 4 auditing fields in place and working, being populated: created on, created by,
+      last modified on, last modified by. The auditing usernames will all default to `llama`.
+    - USERS have a one to many relationship with TODOS.
 
-- [ ] SeedData.java is a sample class that can be modified to populate the database. However, this is the seed data to use for this application. The structure can change, the data should not change. Do populate the database with this data.
+- [ ] SeedData.java is a sample class that can be modified to populate the database. However, this is the seed data to
+  use for this application. The structure can change, the data should not change. Do populate the database with this
+  data.
 
-The following end points are already available in the initial application. You are to make sure the end points work with the newly added todos table
+The following end points are already available in the initial application. You are to make sure the end points work with
+the newly added todos table
 
 - [ ] GET /users/users - return all of the users and their todos.
 
@@ -1821,16 +1838,22 @@ The following end points are already available in the initial application. You a
 - [ ] Spell-check.
 - [ ] Schedule time to review, refine and reassess your work.
 
-It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
+It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that
+attempts too much and fails.
 
 ### Tips and Gotchas
 
-In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
+In your solution, it is essential that you follow best practices and produce clean and professional results. You will be
+scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your
+work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better
+to submit a challenge that meets MVP than one that attempts too much and does not.
 
 ### Task 3: Stretch Goals
 
-- [ ] GET /users/users/todos - lists the number of todos each user has that are NOT completed. Use a custom query to accomplish this!
-  - Users with 0 todos do NOT have to be included in the list
-  - Order the list by username!
-  
-- [ ] Add in 100 more random users each with a random number (0 - 3) of random todos. The todos descriptions should be something random as well. For my example, I picked Pokemon names!
+- [ ] GET /users/users/todos - lists the number of todos each user has that are NOT completed. Use a custom query to
+  accomplish this!
+    - Users with 0 todos do NOT have to be included in the list
+    - Order the list by username!
+
+- [ ] Add in 100 more random users each with a random number (0 - 3) of random todos. The todos descriptions should be
+  something random as well. For my example, I picked Pokemon names!
